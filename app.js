@@ -76,10 +76,6 @@ const calculation = (percentage)=>{
     totalPPerson.innerHTML="$"+paymentPlusTipPPerson
 }
 
-window.addEventListener("scroll", ()=>{
-    resetFunction()
-})
-
 const resetFunction = ()=>{
     billAmount.value = ""
     peopleAmount.value = ""
