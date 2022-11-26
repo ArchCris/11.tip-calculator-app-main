@@ -1,0 +1,276 @@
+/*Colors*/
+/*Font size*/
+/*Font family*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+/*Font weight*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: hsl(185deg, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*Input remove arrowws*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Input remove arrowws*/
+.logo {
+  margin-bottom: 2.75rem;
+}
+
+.app {
+  background-color: hsl(0deg, 0%, 100%);
+  min-height: 480px;
+  max-width: 920px;
+  display: flex;
+  padding: 2rem;
+  border-radius: 2rem;
+  font-family: "Space Mono", monospace;
+  color: hsl(186deg, 14%, 43%);
+}
+
+@media (max-width: 720px) {
+  body {
+    justify-content: flex-end;
+  }
+  .logo {
+    margin-bottom: 2.5rem;
+  }
+  .app {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .attribution {
+    display: none;
+  }
+  .app__input-section {
+    padding: 0;
+    height: 100%;
+    padding: 1rem 0 3rem 0;
+  }
+}
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.app__input-section {
+  padding: 1rem 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+  .app__input-section {
+    padding: 0.5rem 0.5rem;
+  }
+}
+.app__input-title-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app__title-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__title {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 1.125rem;
+}
+
+.app__warning {
+  margin-bottom: 1.125rem;
+  color: hsl(10deg, 61%, 63%);
+  line-height: 1;
+  display: none;
+}
+
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+  background-color: hsl(189deg, 41%, 97%);
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.app__input {
+  background-color: hsl(189deg, 41%, 97%);
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: end;
+  color: hsl(183deg, 100%, 15%);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.input-field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .input-field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.btn {
+  height: 3rem;
+  font-size: 1.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.percentajeField {
+  background-color: hsl(189deg, 41%, 97%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.percentajeField:hover {
+  background-color: hsl(189deg, 41%, 97%);
+  border: solid 3px hsl(173deg, 61%, 77%);
+  color: hsl(186deg, 14%, 43%);
+}
+
+.reset {
+  background-color: hsl(173deg, 61%, 77%);
+  filter: opacity(20%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.reset:hover {
+  filter: opacity(100%);
+}
+
+.app__output {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  min-width: 412px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+  .app__output {
+    min-width: 0px;
+    padding: 1.5rem;
+  }
+}
+.app__output-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .app__output-display {
+    margin-bottom: 1rem;
+  }
+}
+.app__out-title {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  line-height: 1;
+}
+
+.app__display-number {
+  font-size: 2rem;
+  color: hsl(172deg, 67%, 45%);
+  line-height: 1;
+}/*# sourceMappingURL=style.css.map */

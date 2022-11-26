@@ -1,0 +1,17 @@
+/*Colors*/
+$StrongCyan:hsl(172, 67%, 45%);
+$veryDarkCyan:hsl(183, 100%, 15%);
+$darkGrayishCyan:hsl(186, 14%, 43%);
+$grayishCyan:hsl(184, 14%, 56%);
+$lightGrayishCyan:hsl(185, 41%, 84%);
+$veryLightGrayishCyan:hsl(189, 41%, 97%);
+$white:hsl(0, 0%, 100%);
+$warning:hsl(10, 61%, 63%);
+$selected:hsl(173, 61%, 77%);
+/*Font size*/
+$inputFontSize:1.5rem;
+/*Font family*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+$fontFamily:'Space Mono', monospace;
+/*Font weight*/
+$fontWeight:700;

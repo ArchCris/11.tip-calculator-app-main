@@ -1,0 +1,195 @@
+@import "variables.scss";
+@import "reset.scss";
+
+body{
+    background-color: $lightGrayishCyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/*Input remove arrowws*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*Input remove arrowws*/
+.logo{
+    margin-bottom: 2.75rem;
+}
+.app{
+    background-color: $white;
+    min-height: 480px;
+    max-width: 920px;
+    display: flex;
+    padding: 2rem;
+    border-radius: 2rem;
+    font-family: $fontFamily;
+    color: $darkGrayishCyan;
+}
+@media (max-width: 720px) {
+    body{
+        justify-content: flex-end;
+    }
+    .logo{
+        margin-bottom: 2.5rem;
+    }
+    .app{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 85vh;
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .attribution{
+        display: none;
+    }
+    .app__input-section{
+        padding: 0;
+        height: 100%;
+        padding: 1rem 0 3rem 0;
+    }
+}
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.app__input-section{
+    padding: 1rem 3rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 720px) {
+    .app__input-section{
+        padding: .5rem .5rem ;
+    }
+
+}
+.app__input-title-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.app__title-conteiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app__title{
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 1.125rem;
+}
+.app__warning{
+    margin-bottom: 1.125rem;
+    color: $warning;
+    line-height: 1;
+    display: none;
+}
+.input-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    background-color: $veryLightGrayishCyan;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+.app__input{
+    background-color: $veryLightGrayishCyan;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: end;
+    color: $veryDarkCyan;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+.input-field-grid{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 1rem;
+}
+@media (max-width: 720px) {
+    .input-field-grid{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+.btn{
+    height: 3rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: .5rem;
+    border: none;
+    background-color: $veryDarkCyan;
+    color: $white;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover{
+    background-color: $StrongCyan;
+    color: $veryDarkCyan;
+}
+.percentajeField{
+    background-color: $veryLightGrayishCyan;
+    color: $veryDarkCyan;
+}
+.percentajeField:hover{
+    background-color: $veryLightGrayishCyan;
+    border: solid 3px $selected;
+    color: $darkGrayishCyan;
+}
+.reset{
+    background-color:$selected;
+    filter: opacity(20%);
+    color:$veryDarkCyan;
+}
+.reset:hover{
+    filter: opacity(100%);
+}
+.app__output{
+    background-color: $veryDarkCyan;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    min-width: 412px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width: 720px) {
+    .app__output{
+        min-width: 0px;
+        padding: 1.5rem;
+    }
+}
+.app__output-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 720px) {
+    .app__output-display{
+        margin-bottom: 1rem;
+    }
+}
+.app__out-title{
+    font-size: 1rem;
+    color: $white;
+    line-height: 1;
+}
+
+.app__display-number{
+    font-size: 2rem;
+    color: $StrongCyan;
+    line-height: 1;
+}
+
